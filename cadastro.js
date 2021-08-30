@@ -91,7 +91,7 @@ export const cadastro = [
         nome: "Gabriela Pandini",
         cidade: "Blumenau",
         idade: 20,
-        bebidaFavorita: "Patagonia Weisse", 
+        bebidaFavorita: "Patagoia Weisse", 
         genero: "Feminino",
         signo: "Peixes",
     },
@@ -122,7 +122,7 @@ export const cadastro = [
     {
         nome: "Emilly Roberta",
         cidade: "São Paulo ",
-        idade: 21,
+        idad: 21,
         bebidaFavorita: "leite com *****", 
         genero: "Feminino",
         signo: "Leão"
@@ -147,7 +147,7 @@ export const cadastro = [
     {
         nome: "Paloma Souza",
         cidade: "Salvador",
-        idade: 28,
+        idad: 28,
         bebidaFavorita: "doBem de coco com chocolate", 
         genero: "Feminino",
         signo: "Leão"
