@@ -1,7 +1,15 @@
-import {cadastro} from "./cadastro";
+import {cadastro, generos, signos} from "./cadastro";
 
-describe('cadastro', () => {
-    test('comprimento', () => {
-      expect(cadastro.length).toEqual(19);
+describe('constantes', () => {
+    test('comprimento do cadastro', () => {
+        expect(cadastro.length).toEqual(19);
+    });
+
+    test('comprimento dos signos', () => {
+        expect(signos.length).toEqual(12);
+      });
+
+    test('comprimento dos generos', () => {
+        expect(generos.length).toEqual(3);
     });
 });
