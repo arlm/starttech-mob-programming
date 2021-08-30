@@ -1,10 +1,14 @@
+
+export const signos = ['Leão','Virgem','Gêmeos','Capricórnio', 'Escorpião', 'Câncer', 'Áries', 'Sagitário', 'Touro', 'Libra', 'Peixes', 'Aquário'];
+export const generos = ['Feminino', 'Masculino', 'Transgênero'];
+
 export const cadastro = [
     {
         nome: "Laila Cardoso",
         cidade: "Salvador",
         idade: 19,
         bebidaFavorita: "Budweiser", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[1]
     },
     {
@@ -12,7 +16,7 @@ export const cadastro = [
         cidade: "São Paulo",
         idade: 26,
         bebidaFavorita: "Stella", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[2]
     },
     {
@@ -20,7 +24,7 @@ export const cadastro = [
         cidade: "Palmas-TO",
         idade: 24,
         bebidaFavorita: "Guaraná", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[3]
     },
     {
@@ -28,15 +32,15 @@ export const cadastro = [
         cidade: "Marília",
         idade: 41,
         bebidaFavorita: "Bohemia", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[7]
     },
     {
         nome: "Cyro Renato",
         cidade: "Rio de janeiro",
         idade: 24,
-        bebidaFavorita: "Guaraná ca", 
-        genero: "Masculino",
+        bebidaFavorita: "Guaraná antártica", 
+        genero: generos[1],
         signo: signos[1]
     },
     {
@@ -44,7 +48,7 @@ export const cadastro = [
         cidade: "Belo Horizonte",
         idade: 26,
         bebidaFavorita: "Original", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[4]
     },
     {
@@ -52,7 +56,7 @@ export const cadastro = [
         cidade: "Carpina/PE",
         idade: 20,
         bebidaFavorita: "Vinho",
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[2]
     },
     {
@@ -60,7 +64,7 @@ export const cadastro = [
         cidade: "Rio de Janeiro",
         idade: 25,
         bebidaFavorita: "Brahma", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[3]
     },
     {
@@ -68,7 +72,7 @@ export const cadastro = [
         cidade: "Rio de Janeiro",
         idade: 26,
         bebidaFavorita: "Guaraná Antartica", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[11]
     },
     {
@@ -76,7 +80,7 @@ export const cadastro = [
         cidade: "Maringá",
         idade: 23,
         bebidaFavorita: "Cerveja", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[1]
     },
     {
@@ -84,7 +88,7 @@ export const cadastro = [
         cidade: "São Paulo",
         idade: 32,
         bebidaFavorita: "colorado", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[8]
     },
     {
@@ -92,7 +96,7 @@ export const cadastro = [
         cidade: "Blumenau",
         idade: 20,
         bebidaFavorita: "Patagonia Weisse", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[10]
     },
     {
@@ -100,23 +104,23 @@ export const cadastro = [
         cidade: "Foz do Iguacu",
         idade: 24,
         bebidaFavorita: "Refri", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[1]
     },
     {
-      nome: "Eudes",
-      cidade: "Mariana",
-      idade: 24,
-      bebidaFavorita: "Skol Beats", 
-      genero: "Masculino",
-      signo: signos[8]
+        nome: "Eudes",
+        cidade: "Mariana",
+        idade: 24,
+        bebidaFavorita: "Skol Beats", 
+        genero: generos[1],
+        signo: signos[8]
     },
     {
         nome: "Jislane Santana",
         cidade: "Campina Grande - PB",
         idade: 26,
         bebidaFavorita: "Cerveja", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos [2]
     },
     {
@@ -124,7 +128,7 @@ export const cadastro = [
         cidade: "São Paulo ",
         idade: 21,
         bebidaFavorita: "leite com *****", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[0]
     },
     {
@@ -132,7 +136,7 @@ export const cadastro = [
         cidade: "Macapá",
         idade: 33,
         bebidaFavorita: "Água", 
-        genero: "Transgênero",
+        genero: generos[2],
         signo: signos[11]
         
     },
@@ -141,7 +145,7 @@ export const cadastro = [
         cidade: "Colatina",
         idade: 23,
         bebidaFavorita: "Cerveja", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[3]
     },
     {
@@ -149,10 +153,9 @@ export const cadastro = [
         cidade: "Salvador",
         idade: 28,
         bebidaFavorita: "doBem de coco com chocolate", 
-        genero: "Feminino",
+        genero: generos[0],
         signo: signos[0]
     },  
 ];
-const signos = ['Leão','Virgem','Gêmeos','Capricórnio', 'Escorpião', 'Câncer', 'Áries', 'Sagitário', 'Touro', 'Libra', 'Peixes', 'Aquário'];
 
 
