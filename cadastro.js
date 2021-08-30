@@ -5,7 +5,7 @@ export const cadastro = [
         idade: 19,
         bebidaFavorita: "Budweiser", 
         genero: "Feminino",
-        signo: signos[1]
+        signo: "Virgem"
     },
     {
         nome: "Mariana Rufino",
@@ -13,7 +13,7 @@ export const cadastro = [
         idade: 26,
         bebidaFavorita: "Stella", 
         genero: "Feminino",
-        signo: signos[2]
+        signo: "Gêmeos"
     },
     {
         nome: "Izabela Gonzaga",
@@ -21,7 +21,7 @@ export const cadastro = [
         idade: 24,
         bebidaFavorita: "Guaraná", 
         genero: "Feminino",
-        signo: signos[3]
+        signo: "Capricórnio"
     },
     {
         nome: "Giu Zambot",
@@ -29,7 +29,7 @@ export const cadastro = [
         idade: 41,
         bebidaFavorita: "Bohemia", 
         genero: "Feminino",
-        signo: signos[7]
+        signo: "Sagitário"
     },
     {
         nome: "Cyro Renato",
@@ -37,7 +37,7 @@ export const cadastro = [
         idade: 24,
         bebidaFavorita: "Guaraná ca", 
         genero: "Masculino",
-        signo: signos[1]
+        signo: "Virgem"
     },
     {
         nome: "Laurão Ribeiro",
@@ -45,7 +45,7 @@ export const cadastro = [
         idade: 26,
         bebidaFavorita: "Original", 
         genero: "Feminino",
-        signo: signos[4]
+        signo: "Escorpião"
     },
     {
         nome: "Mayhhara Morais",
@@ -53,7 +53,7 @@ export const cadastro = [
         idade: 20,
         bebidaFavorita: "Vinho",
         genero: "Feminino",
-        signo: signos[2]
+        signo: "Gêmeos"
     },
     {
         nome: "Clara Vasques",
@@ -61,7 +61,7 @@ export const cadastro = [
         idade: 25,
         bebidaFavorita: "Brahma", 
         genero: "Feminino",
-        signo: signos[3]
+        signo: "Capricórnio"
     },
     {
         nome: "Paloma Calado",
@@ -69,23 +69,23 @@ export const cadastro = [
         idade: 26,
         bebidaFavorita: "Guaraná Antartica", 
         genero: "Feminino",
-        signo: signos[11]
+        signo: "Aquário"
     },
     {
         nome: "Rafaela Bittencourt",
         cidade: "Maringá",
         idade: 23,
-        bebidaFavorita: "Cerveja", 
-        genero: "Feminino",
-        signo: signos[1]
+        bebidaFavorita: "cerveja", 
+        genero: "feminino",
+        signo: "virgem"
     },
     {
         nome: "Laura Ribeiro",
         cidade: "São Paulo",
         idade: 32,
         bebidaFavorita: "colorado", 
-        genero: "Feminino",
-        signo: signos[8]
+        genero: "feminino",
+        signo: "touro",
     },
     {
         nome: "Gabriela Pandini",
@@ -93,7 +93,7 @@ export const cadastro = [
         idade: 20,
         bebidaFavorita: "Patagonia Weisse", 
         genero: "Feminino",
-        signo: signos[10]
+        signo: "Peixes",
     },
     {
         nome: "Gabriela Moro",
@@ -101,7 +101,7 @@ export const cadastro = [
         idade: 24,
         bebidaFavorita: "Refri", 
         genero: "Feminino",
-        signo: signos[1]
+        signo: "Virgem"
     },
     {
       nome: "Eudes",
@@ -109,7 +109,7 @@ export const cadastro = [
       idade: 24,
       bebidaFavorita: "Skol Beats", 
       genero: "Masculino",
-      signo: signos[8]
+      signo: "Touro"
     },
     {
         nome: "Jislane Santana",
@@ -117,7 +117,7 @@ export const cadastro = [
         idade: 26,
         bebidaFavorita: "Cerveja", 
         genero: "Feminino",
-        signo: signos [2]
+        signo: "Gêmeos "
     },
     {
         nome: "Emilly Roberta",
@@ -125,7 +125,7 @@ export const cadastro = [
         idade: 21,
         bebidaFavorita: "leite com *****", 
         genero: "Feminino",
-        signo: signos[0]
+        signo: "Leão"
     },
     {
         nome: "Úrsula Ariel",
@@ -133,7 +133,7 @@ export const cadastro = [
         idade: 33,
         bebidaFavorita: "Água", 
         genero: "Transgênero",
-        signo: signos[11]
+        signo: "Aquário"
         
     },
     {
@@ -142,7 +142,7 @@ export const cadastro = [
         idade: 23,
         bebidaFavorita: "Cerveja", 
         genero: "Feminino",
-        signo: signos[3]
+        signo: "Capricórnio"
     },
     {
         nome: "Paloma Souza",
@@ -150,9 +150,7 @@ export const cadastro = [
         idade: 28,
         bebidaFavorita: "doBem de coco com chocolate", 
         genero: "Feminino",
-        signo: signos[0]
-    },  
+        signo: "Leão"
+    },
 ];
-const signos = ['Leão','Virgem','Gêmeos','Capricórnio', 'Escorpião', 'Câncer', 'Áries', 'Sagitário', 'Touro', 'Libra', 'Peixes', 'Aquário'];
-
 
