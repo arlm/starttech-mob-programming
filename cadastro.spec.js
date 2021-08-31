@@ -5,27 +5,98 @@ describe('cadastro', () => {
         expect(cadastro.pessoas.length).toEqual(19);
     });
 
-    test('adicionar e remover #1', () => {
+    test('adiocinar e remover NULL', () => {
+        expect(cadastro.pessoas.length).toEqual(19);
+        cadastro.adicionar(null);
+        expect(cadastro.pessoas.length).toEqual(19);
+        cadastro.remover(null);
+        expect(cadastro.pessoas.length).toEqual(19);
+    });
+
+    test('adiocinar e remover UNDEFINED', () => {
+        expect(cadastro.pessoas.length).toEqual(19);
+        cadastro.adicionar(undefined);
+        expect(cadastro.pessoas.length).toEqual(19);
+        cadastro.remover(undefined);
+        expect(cadastro.pessoas.length).toEqual(19);
+    });
+
+    test('adiocinar e remover #1', () => {
+        expect(cadastro.pessoas.length).toEqual(19);
         cadastro.adicionar({ });
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ });
         expect(cadastro.pessoas.length).toEqual(19);
     });
 
-    test('adicionar e remover #2', () => {
+    test('adiocinar e remover #2', () => {
+        expect(cadastro.pessoas.length).toEqual(19);
         cadastro.adicionar({ nome: "A" });
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ });
+        expect(cadastro.pessoas.length).toEqual(20);
+        cadastro.remover(null);
+        expect(cadastro.pessoas.length).toEqual(20);
+        cadastro.remover(undefined);
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ nome: "A" });
         expect(cadastro.pessoas.length).toEqual(19);
     });
 
-    test('adicionar e remover #3', () => {
+    test('adiocinar e remover #3', () => {
+        expect(cadastro.pessoas.length).toEqual(19);
         cadastro.adicionar({ nome: "A" });
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ nome: "A" });
         expect(cadastro.pessoas.length).toEqual(19);
+    });
+
+    test('adiocinar e remover #4', () => {
+        expect(cadastro.pessoas.length).toEqual(19);
+        cadastro.adicionar({ nome: "A", cidade: "Curitiba"});
+        expect(cadastro.pessoas.length).toEqual(20);
+        cadastro.adicionar({ nome: "A", cidade: "Blumenau"});
+        expect(cadastro.pessoas.length).toEqual(21);
+        cadastro.remover({ nome: "A" });
+        expect(cadastro.pessoas.length).toEqual(20);
+        var pessoaA = cadastro.pessoas.find(p=>p.nome == "A");
+        expect(pessoaA.cidade).toEqual("Blumenau")
+        cadastro.remover({ nome: "A" });
+        expect(cadastro.pessoas.length).toEqual(19);
+    });
+
+    test('buscar NULL', () => {
+        var pessoa = cadastro.buscar(null);
+        expect(pessoa).toBeUndefined();
+    });
+
+    test('bucar UNDEFINED', () => {
+        var pessoa = cadastro.buscar(undefined);
+        expect(pessoa).toBeUndefined();
+    });
+
+    test('bucar #1', () => {
+        var pessoa = cadastro.buscar({ });
+        expect(pessoa).toBeUndefined();
+    });
+
+    test('bucar #2', () => {
+        var pessoa = cadastro.buscar({ nome: "Laila Cardoso" });
+        expect(pessoa.nome).toEqual("Laila Cardoso" );
+        expect(pessoa.cidade).toEqual("Salvador" );
+    });
+
+    test('bucar #3', () => {
+        var pessoa = cadastro.buscar({ cidade: "Laila Cardoso", cidade: "Rio de Janeiro"});
+        expect(pessoa).toBeUndefined();
+    });
+
+    test('bucar #4', () => {
+        var pessoas = cadastro.buscar({ nome: "Rio de Janeiro" });
+        expect(pessoas.length).toEqual(3);
+        expect(pessoas[0].nome).toEqual("Cyro Renato" );
+        expect(pessoas[1].nome).toEqual("Clara Vasques" );
+        expect(pessoas[2].nome).toEqual("Paloma Calado" );
     });
 });
 
