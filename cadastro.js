@@ -1,5 +1,19 @@
+ 
+export const signos = {
+    leao: 'Leão',
+    virgem: 'Virgem',
+    gemeos: 'Gêmeos',
+    capricornio: 'Capricórnio',
+    escorpiao: 'Escorpiao',
+    cancer: 'Câncer',
+    aries: 'Áries',
+    sagitario: 'Sagitário',
+    touro: 'Touro',
+    libra: 'Libra',
+    peixes: 'Peixes',
+    aquario: 'Aquário'
+};
 
-export const signos = ['Leão', 'Virgem', 'Gêmeos', 'Capricórnio', 'Escorpião', 'Câncer', 'Áries', 'Sagitário', 'Touro', 'Libra', 'Peixes', 'Aquário'];
 export const generos = {
     feminino: "Feminino",
     masculino: "Masculino",
@@ -172,8 +186,8 @@ export const cadastro = {
 
 export const contaSignos = (signo) => {
     let contador = 0;
-    for (let i = 0; i < cadastro.length; i++){ // length retorna o número de unidades de código presentes na string.
-        if (signo === cadastro[i].signo) contador++;
+    for (let i = 0; i < cadastro.pessoas.length; i++){ // length retorna o número de unidades de código presentes na string.
+        if (signo === cadastro.pessoas[i].signo) contador++;
     }
     
     return contador;
@@ -190,9 +204,9 @@ export const contaGeneros = (genero) => {
 
 export const filtraSignos = (signo) => {
     let pessoasSigno = [];
-    for (let i = 0; i < cadastro.length; i++){
-        if (signo === cadastro[i].signo){
-            pessoasSigno.push(cadastro[i]); //pega a ficha das pessoas do signo x e coloca numa nova array
+    for (let i = 0; i < cadastro.pessoas.length; i++){
+        if (signo === cadastro.pessoas[i].signo){
+            pessoasSigno.push(cadastro.pessoas[i]); //pega a ficha das pessoas do signo x e coloca numa nova array
         }
     }
     
