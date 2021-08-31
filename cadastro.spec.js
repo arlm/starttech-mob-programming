@@ -28,15 +28,15 @@ describe('cadastro', () => {
 });
 
 describe('signos', () => {
-    xtest('comprimento dos signos', () => {
+    test('comprimento dos signos', () => {
         expect(Object.keys(signos).length).toEqual(12);
     });
 
-    xtest('Virgem', () => {
+    test('Virgem', () => {
         expect(signos.virgem).toEqual("Virgem");
     });
 
-    xtest('Leão', () => {
+    test('Leão', () => {
         expect(signos.leao).toEqual("Leão");
     });
 
@@ -61,23 +61,23 @@ describe('generos', () => {
 });
 
 describe('contagem', () => {
-    xtest('Contagem de Signos #1', () => {
+    test('Contagem de Signos #1', () => {
         expect(contaSignos(signos.virgem)).toEqual(4);
     });
 
-    xtest('Contagem de Signos #2', () => {
+    test('Contagem de Signos #2', () => {
         expect(contaSignos(signos.leao)).toEqual(2);
     });
 
-    xtest('Contagem de Signos #3', () => {
+    test('Contagem de Signos #3', () => {
         expect(contaSignos('trololo')).toEqual(0);
     });
 
-    xtest('Contagem de Signos NULL', () => {
+    test('Contagem de Signos NULL', () => {
         expect(contaSignos(null)).toEqual(0);
     });
 
-    xtest('Contagem de Signos UNDEFINED', () => {
+    test('Contagem de Signos UNDEFINED', () => {
         expect(contaSignos(undefined)).toEqual(0);
     });
 
@@ -116,7 +116,7 @@ describe('filtros', () => {
         expect(resultado.map(p => p.nome)).not.toEqual(expect.arrayContaining(['Eudes', 'Cyro Renato']));
     });
 
-    xtest('Filtro de Signo #1', () => {
+    test('Filtro de Signo #1', () => {
         const signo = signos.virgem;
         const resultado = filtraSignos(signo);
         const esperado = contaSignos(signo);
