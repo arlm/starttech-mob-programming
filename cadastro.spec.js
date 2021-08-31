@@ -19,7 +19,7 @@ describe('cadastro', () => {
         expect(cadastro.remover({ })).toEqual(20);
     });
 
-    xtest('adicinar e remover #2', () => {
+    xtest('adicinar e remover #3', () => {
         cadastro.adicionar({ nome: "A" });
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ nome: "A" });
@@ -28,15 +28,15 @@ describe('cadastro', () => {
 });
 
 describe('signos', () => {
-    test('comprimento dos signos', () => {
+    xtest('comprimento dos signos', () => {
         expect(Object.keys(signos).length).toEqual(12);
     });
 
-    test('Virgem', () => {
+    xtest('Virgem', () => {
         expect(signos.virgem).toEqual("Virgem");
     });
 
-    test('Leão', () => {
+    xtest('Leão', () => {
         expect(signos.leao).toEqual("Leão");
     });
 
@@ -61,53 +61,53 @@ describe('generos', () => {
 });
 
 describe('contagem', () => {
-    test('Contagem de Signos #1', () => {
+    xtest('Contagem de Signos #1', () => {
         expect(contaSignos(signos.virgem)).toEqual(4);
     });
 
-    test('Contagem de Signos #2', () => {
+    xtest('Contagem de Signos #2', () => {
         expect(contaSignos(signos.leao)).toEqual(2);
     });
 
-    test('Contagem de Signos #3', () => {
+    xtest('Contagem de Signos #3', () => {
         expect(contaSignos('trololo')).toEqual(0);
     });
 
-    test('Contagem de Signos NULL', () => {
+    xtest('Contagem de Signos NULL', () => {
         expect(contaSignos(null)).toEqual(0);
     });
 
-    test('Contagem de Signos UNDEFINED', () => {
+    xtest('Contagem de Signos UNDEFINED', () => {
         expect(contaSignos(undefined)).toEqual(0);
     });
 
-    test('Contagem de Gênero #1', () => {
+    xtest('Contagem de Gênero #1', () => {
         expect(contaGeneros(generos.feminino)).toEqual(16);
     });
 
-    test('Contagem de Gênero #2', () => {
+    xtest('Contagem de Gênero #2', () => {
         expect(contaGeneros(generos.masculino)).toEqual(2);
     });
 
-    test('Contagem de Gênero #3', () => {
+    xtest('Contagem de Gênero #3', () => {
         expect(contaGeneros(generos.transgenero)).toEqual(1);
     });
 
-    test('Contagem de Gênero #4', () => {
+    xtest('Contagem de Gênero #4', () => {
         expect(contaGeneros('Escolha seu campeão')).toEqual(0);
     });
 
-    test('Contagem de Gênero NULL', () => {
+    xtest('Contagem de Gênero NULL', () => {
         expect(contaGeneros(null)).toEqual(0);
     });
 
-    test('Contagem de Gênero UNDEFINED', () => {
+    xtest('Contagem de Gênero UNDEFINED', () => {
         expect(contaGeneros(undefined)).toEqual(0);
     });
 });
 
 describe('filtros', () => {
-    test('Filtro de Gênero #1', () => {
+    xtest('Filtro de Gênero #1', () => {
         const genero = generos.feminino;
         const resultado = filtraGeneros(genero);
         const esperado = contaGeneros(genero);
@@ -116,7 +116,7 @@ describe('filtros', () => {
         expect(resultado.map(p => p.nome)).not.toEqual(expect.arrayContaining(['Eudes', 'Cyro Renato']));
     });
 
-    test('Filtro de Signo #1', () => {
+    xtest('Filtro de Signo #1', () => {
         const signo = signos.virgem;
         const resultado = filtraSignos(signo);
         const esperado = contaSignos(signo);
