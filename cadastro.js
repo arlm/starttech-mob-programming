@@ -181,8 +181,8 @@ export const contaSignos = (signo) => {
 
 export const contaGeneros = (genero) => {
     let contador = 0;
-    for (let i = 0; i < cadastro.length; i++){
-        if (genero === cadastro[i].genero) contador++;
+    for (let i = 0; i < cadastro.pessoas.length; i++){
+        if (genero === cadastro.pessoas[i].genero) contador++;
     }
    
     return contador;
@@ -201,9 +201,9 @@ export const filtraSignos = (signo) => {
 
 export const filtraGeneros = (genero) => {
     let pessoasGenero = [];
-    for (let i = 0; i < cadastro.length; i++){
-        if (genero === cadastro[i].genero) {
-            pessoasGenero.push(cadastro[i]);
+    for (let i = 0; i < cadastro.pessoas.length; i++){
+        if (genero === cadastro.pessoas[i].genero) {
+            pessoasGenero.push(cadastro.pessoas[i]);
         }
     }
    
