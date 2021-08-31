@@ -24,8 +24,11 @@ export const cadastro = {
     adicionar: function (dados) {
         this.pessoas.push(dados);
     },
-    remover: function () {
-        this.pessoas.pop();
+    remover: function (dados) {
+        var indiceProcurado = this.pessoas.findIndex(p => dados.nome === p.nome);
+        if (indiceProcurado > -1) {
+            this.pessoas.splice(indiceProcurado, 1);
+        }
     },
     pessoas: [
         {

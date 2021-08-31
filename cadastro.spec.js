@@ -5,25 +5,27 @@ describe('cadastro', () => {
         expect(cadastro.pessoas.length).toEqual(19);
     });
 
-    xtest('adicinar e remover #1', () => {
+    test('adicionar e remover #1', () => {
         cadastro.adicionar({ });
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ });
-        expect(cadastro.remover({ })).toEqual(19);
+        expect(cadastro.pessoas.length).toEqual(19);
     });
 
-    xtest('adicinar e remover #2', () => {
+    test('adicionar e remover #2', () => {
         cadastro.adicionar({ nome: "A" });
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ });
-        expect(cadastro.remover({ })).toEqual(20);
+        expect(cadastro.pessoas.length).toEqual(20);
+        cadastro.remover({ nome: "A" });
+        expect(cadastro.pessoas.length).toEqual(19);
     });
 
-    xtest('adicinar e remover #3', () => {
+    test('adicionar e remover #3', () => {
         cadastro.adicionar({ nome: "A" });
         expect(cadastro.pessoas.length).toEqual(20);
         cadastro.remover({ nome: "A" });
-        expect(cadastro.remover({ })).toEqual(19);
+        expect(cadastro.pessoas.length).toEqual(19);
     });
 });
 
