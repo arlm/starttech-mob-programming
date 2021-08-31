@@ -1,6 +1,11 @@
 
 export const signos = ['Leão','Virgem','Gêmeos','Capricórnio', 'Escorpião', 'Câncer', 'Áries', 'Sagitário', 'Touro', 'Libra', 'Peixes', 'Aquário'];
-export const generos = ['Feminino', 'Masculino', 'Transgênero'];
+
+export const generos = {
+    feminino: "Feminino",
+    masculino: "Masculino",
+    transgenero: "Transgênero"
+}
 
 export const cadastro = [
     {
