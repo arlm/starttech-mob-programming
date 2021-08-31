@@ -43,19 +43,19 @@ describe('signos', () => {
 });
 
 describe('generos', () => {
-    xtest('comprimento dos generos', () => {
+    test('comprimento dos generos', () => {
         expect(Object.keys(generos).length).toEqual(3);
     });
 
-    xtest('Contagem de Signos #1', () => {
+    test('Contagem de Signos #1', () => {
         expect(generos.feminino).toEqual("Feminino");
     });
 
-    xtest('Contagem de Signos #2', () => {
+    test('Contagem de Signos #2', () => {
         expect(generos.masculino).toEqual("Masculino");
     });
 
-    xtest('Contagem de Signos #2', () => {
+    test('Contagem de Signos #2', () => {
         expect(generos.transgenero).toEqual("Transgênero");
     });
 });

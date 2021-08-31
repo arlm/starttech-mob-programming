@@ -1,7 +1,12 @@
 
 export const signos = ['Leão', 'Virgem', 'Gêmeos', 'Capricórnio', 'Escorpião', 'Câncer', 'Áries', 'Sagitário', 'Touro', 'Libra', 'Peixes', 'Aquário'];
-export const generos = ['Feminino', 'Masculino', 'Transgênero'];
-
+export const generos = {
+    feminino: "Feminino",
+    masculino: "Masculino",
+    transgenero: "Transgênero"
+}
+    
+    
 export const cadastro = {
     adicionar: function (dados) {
         this.pessoas.push(dados);
@@ -168,40 +173,40 @@ export const cadastro = {
 
 export const contaSignos = (signo) => {
     let contador = 0;
-    for (let i = 0; i < cadastro.length; i++) { // length retorna o número de unidades de código presentes na string.
+    for (let i = 0; i < cadastro.length; i++){ // length retorna o número de unidades de código presentes na string.
         if (signo === cadastro[i].signo) contador++;
     }
-
+    
     return contador;
 };
 
 export const contaGeneros = (genero) => {
     let contador = 0;
-    for (let i = 0; i < cadastro.length; i++) {
+    for (let i = 0; i < cadastro.length; i++){
         if (genero === cadastro[i].genero) contador++;
     }
-
+   
     return contador;
 };
 
 export const filtraSignos = (signo) => {
     let pessoasSigno = [];
-    for (let i = 0; i < cadastro.length; i++) {
-        if (signo === cadastro[i].signo) {
+    for (let i = 0; i < cadastro.length; i++){
+        if (signo === cadastro[i].signo){
             pessoasSigno.push(cadastro[i]); //pega a ficha das pessoas do signo x e coloca numa nova array
         }
     }
-
+    
     return pessoasSigno;
 };
 
 export const filtraGeneros = (genero) => {
     let pessoasGenero = [];
-    for (let i = 0; i < cadastro.length; i++) {
+    for (let i = 0; i < cadastro.length; i++){
         if (genero === cadastro[i].genero) {
             pessoasGenero.push(cadastro[i]);
         }
     }
-
+   
     return pessoasGenero;
 };
