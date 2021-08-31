@@ -81,33 +81,33 @@ describe('contagem', () => {
         expect(contaSignos(undefined)).toEqual(0);
     });
 
-    xtest('Contagem de Gênero #1', () => {
+    test('Contagem de Gênero #1', () => {
         expect(contaGeneros(generos.feminino)).toEqual(16);
     });
 
-    xtest('Contagem de Gênero #2', () => {
+    test('Contagem de Gênero #2', () => {
         expect(contaGeneros(generos.masculino)).toEqual(2);
     });
 
-    xtest('Contagem de Gênero #3', () => {
+    test('Contagem de Gênero #3', () => {
         expect(contaGeneros(generos.transgenero)).toEqual(1);
     });
 
-    xtest('Contagem de Gênero #4', () => {
+    test('Contagem de Gênero #4', () => {
         expect(contaGeneros('Escolha seu campeão')).toEqual(0);
     });
 
-    xtest('Contagem de Gênero NULL', () => {
+    test('Contagem de Gênero NULL', () => {
         expect(contaGeneros(null)).toEqual(0);
     });
 
-    xtest('Contagem de Gênero UNDEFINED', () => {
+    test('Contagem de Gênero UNDEFINED', () => {
         expect(contaGeneros(undefined)).toEqual(0);
     });
 });
 
 describe('filtros', () => {
-    xtest('Filtro de Gênero #1', () => {
+    test('Filtro de Gênero #1', () => {
         const genero = generos.feminino;
         const resultado = filtraGeneros(genero);
         const esperado = contaGeneros(genero);

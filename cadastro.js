@@ -4,8 +4,7 @@ export const generos = {
     feminino: "Feminino",
     masculino: "Masculino",
     transgenero: "Transgênero"
-}
-    
+};
     
 export const cadastro = {
     adicionar: function (dados) {
