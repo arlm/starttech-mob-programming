@@ -87,12 +87,12 @@ describe('cadastro', () => {
     });
 
     test('bucar #3', () => {
-        var pessoa = cadastro.buscar({ cidade: "Laila Cardoso", cidade: "Rio de Janeiro"});
+        var pessoa = cadastro.buscar({ nome: "Laila Cardoso", cidade: "Rio de Janeiro"});
         expect(pessoa).toBeUndefined();
     });
 
     test('bucar #4', () => {
-        var pessoas = cadastro.buscar({ nome: "Rio de Janeiro" });
+        var pessoas = cadastro.buscar({ cidade: "Rio de Janeiro" });
         expect(pessoas.length).toEqual(3);
         expect(pessoas[0].nome).toEqual("Cyro Renato" );
         expect(pessoas[1].nome).toEqual("Clara Vasques" );
