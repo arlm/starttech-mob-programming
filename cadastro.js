@@ -22,7 +22,7 @@ export const generos = {
     
 export const cadastro = {
     buscar: function (dados) {
-        if (dados == null || dados == undefined || Object.keys(dados).length == 0) return  // checar validade dos dados     
+        if (dados == null || dados == undefined || Object.keys(dados).length == 0) return undefined; // checar validade dos dados     
         var pessoasFiltradas = this.pessoas.filter(pessoa => { //filtrar informações que serão adicionadas no array
             for (const chave in dados) {
                 if (dados[chave].toLowerCase() !== pessoa[chave].toLowerCase()) return false; // transformar todas as strings em letra minúscula e depois comparar se são diferentes 
@@ -31,9 +31,9 @@ export const cadastro = {
             };
             return true 
         })
-        if (pessoasFiltradas.length == 1) return pessoasFiltradas[0] // retornar apenas o nome da pessoa quando tiver somente uma informação na array
-        else if (pessoasFiltradas.length == 0) return undefined // retornar undefined se o array de informações estiver vazio
-        return pessoasFiltradas // retornar o array com todas as informações
+        if (pessoasFiltradas.length == 1) return pessoasFiltradas[0]; // retornar dados relacionadas ao nome da pessoa quando tiver somente uma informação na array
+        else if (pessoasFiltradas.length == 0) return undefined; // retornar undefined se o array de informações estiver vazio
+        return pessoasFiltradas; // retornar o array com todas as informações
         
     },
     
@@ -42,11 +42,11 @@ export const cadastro = {
     
     
     adicionar: function (dados) {
-        if (dados == null || dados == undefined) return
+        if (dados == null || dados == undefined) return;
         this.pessoas.push(dados);
     },
     remover: function (dados) {
-        if (dados == null || dados == undefined) return
+        if (dados == null || dados == undefined) return;
         var indiceProcurado = this.pessoas.findIndex(p => dados.nome === p.nome);
         if (indiceProcurado > -1) {
             this.pessoas.splice(indiceProcurado, 1);
